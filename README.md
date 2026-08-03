@@ -41,7 +41,8 @@ Check out the live production version here: [https://your-client-domain.com](htt
 ├── public/               # Publicly accessible assets (CSS, JS, Images)
 └── resources/
     ├── views/            # Blade templates for UI components
-    └── js / css          # Frontend source assets
+    ├── js/               # Scripts for frontend aplications
+    └── css/              # Styles
 ```
 
 ---
