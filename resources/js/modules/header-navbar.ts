@@ -3,20 +3,18 @@ export function initHeaderNavbar(): void {
 
     if (!navbar) return;
 
-    navbar.addEventListener('click', (event) => {
+    // navbar.addEventListener('click', (event) => {
+    //     event.preventDefault();
 
-        const target = event.target as HTMLElement;
+    //     const target = event.target as HTMLElement;
 
-        if (target.tagName === 'A') {
-            const href = target.getAttribute('href');
+    //     if (target) {
+    //         navbar.querySelector('.active')?.classList.remove('active', 'bg-brand', 'text-white');
+    //         target.classList.add('active');
 
-            if (href && href.startsWith('#')) {
-                event.preventDefault();
-                const section = document.querySelector(href);
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        }
-    });
+    //         target.classList.add('bg-brand', 'text-white');
+    //     }
+
+        
+    // });
 }
