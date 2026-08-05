@@ -25,8 +25,8 @@
                         <a 
                             href="{{ route('home') }}"
                             @class([
-                                'hover:text-white hover:bg-brand px-4 py-2 rounded-lg transition duration-300',
-                                'bg-brand text-white' => request()->routeIs('home')
+                                'hover:underline underline-offset-8 decoration-2 px-4 py-2 rounded-lg transition duration-300',
+                                'underline underline-offset-8' => request()->routeIs('home')
                             ])
                         >
                             Início
@@ -36,8 +36,8 @@
                         <a 
                             href="{{ route('services') }}"
                             @class([
-                                'hover:text-white hover:bg-brand px-4 py-2 rounded-lg transition duration-300',
-                                'bg-brand text-white' => request()->routeIs('services')
+                                'hover:underline underline-offset-8 decoration-2 px-4 py-2 rounded-lg transition duration-300',
+                                'underline underline-offset-8' => request()->routeIs('services')
                             ])
                         >
                             Serviços
@@ -47,8 +47,8 @@
                         <a 
                             href="{{ route('about') }}"
                             @class([
-                                'hover:text-white hover:bg-brand px-4 py-2 rounded-lg transition duration-300',
-                                'bg-brand text-white' => request()->routeIs('about')
+                                'hover:underline underline-offset-8 decoration-2 px-4 py-2 rounded-lg transition duration-300',
+                                'underline underline-offset-8' => request()->routeIs('about')
                             ])
                         >
                             Sobre nós

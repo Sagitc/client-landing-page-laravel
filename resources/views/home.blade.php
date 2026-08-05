@@ -16,8 +16,25 @@
         </div>
     </section>
 
-    <section class="container mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Nossos Destaques</h2>
+    <section class="">
+        <div class="container mx-auto py-10 px-4 md:px-2 lg:px-0">
+            <h2 class="text-2xl font-bold text-center mb-8">Serviços que oferecemos</h2>
+            <div class="container grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <x-service-card 
+                    serviceName="Manutenção Predial" 
+                    backgroundImage="images/hero/mobile-banner.jpg" 
+                />
+                <x-service-card 
+                    serviceName="Reformas e Reparos" 
+                    backgroundImage="images/hero/mobile-banner.jpg" 
+                />
+                <x-service-card 
+                    serviceName="Consultoria Técnica" 
+                    backgroundImage="images/hero/mobile-banner.jpg" 
+                />
+
+            </div>
+        </div>
     </section>
 
 @endsection
