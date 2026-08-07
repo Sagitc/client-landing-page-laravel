@@ -1,31 +1,40 @@
-@props(['serviceName', 'backgroundImage'])
+@props([
+    'serviceName', 
+    'backgroundImage', 
+    'icon' => 'check',
+    'link' => '#'
+])
 
-<div class="flex flex-col gap-1">
-    <div class="relative w-full h-80 rounded-xl overflow-hidden group">
-        
-        <picture>
-            <source srcset="{{ asset($backgroundImage) }}" media="(min-width: 768px)" />
-            <img
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                src="{{ asset($backgroundImage) }}"
-                alt="{{ $serviceName }}" 
-            />
-        </picture>
-
-        <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-
-        <h3 class="absolute bottom-3 left-3 right-3 text-lg font-semibold text-white drop-shadow-md">
-            {{ $serviceName }}
-        </h3>
-    </div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-brand hover:shadow-md group">
 
     <div>
-        <a
-            class="block w-full py-2 px-4 rounded-xl border border-brand text-black font-medium hover:bg-brand hover:text-white transition duration-300 text-center"
-            href="#"
-            target="_blank"
-        >
-            Saiba mais
+        <div class="relative w-full h-52 overflow-hidden">
+            <div class="absolute top-4 left-4 z-10 w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-md bg-slate-900/90 backdrop-blur-sm group-hover:bg-brand transition-colors duration-300">
+                <x-dynamic-component :component="'lucide-' . $icon" class="w-5 h-5" />
+            </div>
+
+            <picture>
+                <source srcset="{{ asset($backgroundImage) }}" media="(min-width: 768px)" />
+                <img 
+                    src="{{ asset($backgroundImage) }}" 
+                    alt="{{ $serviceName }}" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+            </picture>
+        </div>
+
+        <div class="p-6 pb-2">
+            <h3 class="text-lg font-bold text-slate-900">
+                {{ $serviceName }}
+            </h3>
+        </div>
+    </div>
+
+    <div class="p-6 pt-0">
+        <a href="{{ $link }}" class="inline-flex items-center gap-1 text-sm font-semibold text-transparent group-hover:text-brand transition-colors duration-300">
+            Saiba mais 
+            <x-lucide-arrow-right class="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
     </div>
+
 </div>

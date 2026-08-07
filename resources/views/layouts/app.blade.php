@@ -9,11 +9,11 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.ts'])
 </head>
-<body class="antialiased bg-gray-50 text-gray-900 flex flex-col gap-4 min-h-screen">
+<body class="antialiased bg-gray-100 text-gray-900 flex flex-col gap-4 min-h-screen">
 
     {{-- HEADER / NAVBAR  --}}
     <header class="w-full bg-white shadow-sm h-22 flex items-center">
-        <div class="container w-full mx-auto flex justify-between items-center px-4 md:px-2 lg:px-0 py-2">
+        <div class="max-w-6xl w-full mx-auto flex justify-between items-center px-4 lg:px-0 py-2">
 
             <a href="{{ route('home') }}" class="flex items-center cursor-pointer">
                 <img class="h-18" src="{{ asset('images/logo/logo-main.png') }}" alt="Logo" />
@@ -113,7 +113,7 @@
     </header>
 
     {{-- MAIN AREA --}}
-    <main class="grow flex flex-col gap-8 first:mt-8">
+    <main class="grow flex flex-col gap-8 px-4 lg:px-0">
         @yield('content')
     </main>
 
