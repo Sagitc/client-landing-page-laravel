@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Início | DS Engenharia')
+@section('title', 'DS Engenharia | Manutenção Predial')
 
 @section('content')
 
-<section id="hero" class="h-[calc(45vh-88px)] md:h-[calc(80vh-88px)]">
+<section id="hero" class="h-100 lg:h-180">
     <div class="max-w-7xl mx-auto h-full md:h-full w-full flex ">
         <img
             src="{{ asset('images/hero/banner-desktop.jpeg') }}"
             alt="Banner DS Engenharia"
-            class="flex-1 rounded-xl object-cover object-left">
+            class="flex-1 h-full w-full rounded-lg object-cover  md:aspect-video overflow-hidden object-left">
     </div>
 
 </section>
