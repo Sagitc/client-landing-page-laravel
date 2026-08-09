@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{-- O @yield permite que cada página defina seu próprio título --}}
-    <title>@yield('title', 'DS Engenharia')</title>
+    <title>@yield('title', 'DS Engenharia | Manutenção e Reformas em Edificações')</title>
+
+    <meta name="description" content="@yield('meta_description', 'Especialistas em reforma de fachada, impermeabilização e manutenção predial em Copacabana e Zona Sul e adjacências. Mais de 18 anos de experiência.')">
+
+    <meta property="og:title" content="@yield('title', 'DS Engenharia | Reforma de Fachada e Manutenção Predial')">
+    <meta property="og:description" content="@yield('meta_description', 'Especialistas em reforma de fachada, impermeabilização e manutenção predial no Rio de Janeiro.')">
+    <meta property="og:image" content="{{ asset('images/og-share.jpg') }}"> {{-- Imagem que aparece quando compartilha o link no WhatsApp --}}
+    <meta property="og:type" content="website">
 
     @vite(['resources/css/app.css', 'resources/js/app.ts'])
 </head>
@@ -15,14 +22,14 @@
 
     {{-- HEADER / NAVBAR  --}}
     <header class="w-full bg-white shadow-sm h-22 flex items-center sticky top-0 z-50">
-        <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 lg:px-2 py-2">
+        <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 lg:px-0 py-2">
 
             <a href="{{ route('home') }}#hero" class="flex items-center cursor-pointer">
                 <img class="h-18" src="{{ asset('images/logo/logo-main.png') }}" alt="Logo" />
             </a>
 
             <nav>
-                <ul id="navbar" class="hidden gap-4 text-brand text-lg font-semibold md:flex">
+                <ul id="navbar" class="hidden gap-4 text-brand text-lg font-semibold md:flex lg:ml-50">
                     <li>
                         <a href="{{ route('home') }}#hero" data-anchor="#hero" class="nav-link-item hover:underline underline-offset-8 decoration-2 px-4 py-2 rounded-lg transition duration-300">
                             Início
@@ -38,21 +45,30 @@
                             Sobre nós
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="{{ route('home') }}#contact" data-anchor="#contact" class="nav-link-item hover:underline underline-offset-8 decoration-2 px-4 py-2 rounded-lg transition duration-300">
                             Contato
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
 
-            <a
-                href="https://api.whatsapp.com/send?phone={{ env('WHATSAPP_NUMBER') }}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
-                target="_blank"
-                class="btn btn-outline btn-accent text-brand hidden md:flex">
-                <img class="h-6 mr-2" src="{{ asset('images/icons/whatsapp-color.svg') }}" alt="Whatsapp Icon" />
-                Whatsapp
-            </a>
+            <div class="flex items-center gap-4">
+                <a
+                    href="https://api.whatsapp.com/send?phone={{ env('WHATSAPP_NUMBER') }}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
+                    target="_blank"
+                    class="text-brand hidden lg:flex items-center gap-2 text-sm font-medium">
+                    <x-lucide-phone class="w-5 h-5" />
+                    (21) 98415-5062
+                </a>
+                <a
+                    href="https://api.whatsapp.com/send?phone={{ env('WHATSAPP_NUMBER') }}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
+                    target="_blank"
+                    class="btn btn-outline btn-accent text-brand hidden md:flex">
+                    <img class="h-6 mr-2" src="{{ asset('images/icons/whatsapp-color.svg') }}" alt="Whatsapp Icon" />
+                    Whatsapp
+                </a>
+            </div>
 
             <div class="dropdown dropdown-end md:hidden">
                 <div tabindex="0" role="button" class="btn btn-ghost focus:ring-2 focus:ring-blue-500">

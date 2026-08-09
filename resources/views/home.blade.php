@@ -19,7 +19,7 @@
         <div class="text-center mb-8">
             <h2 class="text-4xl font-bold text-center text-brand mb-4">Nossas especialidades</h2>
             <span class="text-lg font-medium text-center text-gray-500">
-                Soluções completas de engenharia predial para preservar o valor e a segurança do seu <br />imóvel.
+                Soluções completas de engenharia predial para preservar o valor e a segurança do seu <br />condomínio.
             </span>
         </div>
 
@@ -164,43 +164,55 @@
     </div>
 </section>
 
-<section id="contact" class="py-10 rounded-lg">
-    <div class="max-w-7xl mx-auto w-full flex flex-col gap-8">
-        <div class="text-center mb-8">
-            <h2 class="text-4xl font-bold text-brand text-center mb-4">Conte conosco</h2>
-            <span class="text-lg font-medium text-center text-gray-500">
-                Nossa equipe está pronta para apresentar a solução ideal para o seu imóvel.
-            </span>
-        </div>
+<section id="contact" class="py-16 bg-gray-50/50 scroll-mt-20">
+    <div class="container mx-auto max-w-2xl bg-white rounded-xl p-8">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 md:place-content-center lg:grid-cols-3 gap-6">
+        <h2 class="text-2xl text-center font-bold text-slate-950 mb-8">
+            Outras formas de contato
+        </h2>
+
+        <div class="flex flex-col gap-4 mb-8">
 
             <x-contact-card
-                label="Telefone"
-                value="(21) 99999-9999"
+                label="Telefone / WhatsApp"
+                value="(21) 98415-5062"
                 icon="phone"
-                href="tel:+552199999999" />
+                href="https://api.whatsapp.com/send?phone=5521984155062&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." />
 
             @php
-                $email = 'contato@dsengenharia.org';
-                $assunto = 'Solicitação de Orçamento - Manutenção Predial';
-                $mensagem = 'Olá, equipe da DS Engenharia! Gostaria de solicitar um orçamento para o meu condomínio/edificação.';
-
-                // Monta a URL perfeita e segura
-                $mailtoUrl = "mailto:{$email}?subject=" . rawurlencode($assunto) . "&body=" . rawurlencode($mensagem);
+            $email = 'comercial@oicramengenharia.com.br';
+            $mailtoUrl = "mailto:{$email}?subject=" . rawurlencode('Solicitação de Orçamento') . "&body=" . rawurlencode('Olá! Gostaria de um orçamento para serviços de manutenção.');
             @endphp
-
             <x-contact-card
-                label="E-MAIL"
+                label="E-mail"
                 value="contato@dsengenharia.org"
                 icon="mail"
                 :href="$mailtoUrl" />
 
             <x-contact-card
-                label="Atendimento"
-                value="Rio de Janeiro - RJ"
-                icon="map" />
+                label="Horário de atendimento"
+                value="Seg–Sex, 8h às 18h"
+                icon="clock" />
+
         </div>
+
+        <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100/60 shadow-sm flex flex-col gap-3">
+
+            <div class="flex items-center gap-2 text-blue-600 font-bold text-xs tracking-wider uppercase">
+                <x-lucide-map-pin class="w-4 h-4" />
+                <span>Região de Atendimento</span>
+            </div>
+
+            <p class="text-slate-900 font-medium text-base leading-relaxed">
+                Zoa sul e adjacências
+            </p>
+
+            <p class="text-slate-400 text-sm">
+                Atendemos exclusivamente a Zona Sul do Rio de Janeiro.
+            </p>
+
+        </div>
+
     </div>
 </section>
 
