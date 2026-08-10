@@ -175,9 +175,9 @@
 
             <x-contact-card
                 label="Telefone / WhatsApp"
-                value="(21) 98415-5062"
+                value="(21) 99315-3214"
                 icon="phone"
-                href="https://api.whatsapp.com/send?phone=5521984155062&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." />
+                href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." />
 
             @php
             $email = 'comercial@oicramengenharia.com.br';

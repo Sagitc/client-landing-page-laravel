@@ -59,7 +59,7 @@
                     target="_blank"
                     class="text-brand hidden lg:flex items-center gap-2 text-sm font-medium">
                     <x-lucide-phone class="w-5 h-5" />
-                    (21) 98415-5062
+                    (21) 99315-3214
                 </a>
                 <a
                     href="https://api.whatsapp.com/send?phone={{ env('WHATSAPP_NUMBER') }}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
