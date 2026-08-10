@@ -45,11 +45,11 @@
                             Sobre nós
                         </a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="{{ route('home') }}#contact" data-anchor="#contact" class="nav-link-item hover:underline underline-offset-8 decoration-2 px-4 py-2 rounded-lg transition duration-300">
                             Contato
                         </a>
-                    </li> -->
+                    </li>
                 </ul>
             </nav>
 
@@ -99,7 +99,9 @@
                 <span class="text-sm text-gray-400">Manutenção Predial</span>
             </div>
             <p class="text-sm text-gray-400 text-center md:text-right">&copy; {{ date('Y') }} DS Engenharia - Todos os direitos reservados.<br />
-                CNPJ: 12.345.678/0001-90</p>
+                Rua Santa Clara, 346 - Copabacana<br/>
+                CNPJ: 12.345.678/0001-90
+            </p>
         </div>
     </footer>
 

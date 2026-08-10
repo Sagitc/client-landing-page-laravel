@@ -23,18 +23,18 @@
             </picture>
         </div>
 
-        <div class="p-6 pb-2">
-            <h3 class="text-lg font-bold text-slate-900">
+        <div class="">
+            <h3 class="text-lg font-bold text-slate-900 p-6">
                 {{ $serviceName }}
             </h3>
         </div>
     </div>
 
-    <div class="p-6 pt-0">
+    <!-- <div class="p-6 pt-0">
         <a href="{{ $link }}" class="inline-flex items-center gap-1 text-sm font-semibold text-transparent group-hover:text-brand transition-colors duration-300">
             Saiba mais 
             <x-lucide-arrow-right class="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
-    </div>
+    </div> -->
 
 </div>
