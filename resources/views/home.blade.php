@@ -91,12 +91,12 @@
 
             <x-testimonial-card
                 icon="clock-arrow-up"
-                number="18+"
+                number="+18"
                 label="Anos de experiência" />
 
             <x-testimonial-card
                 icon="check-circle-2"
-                number="1500+"
+                number="+1.500"
                 label="Obras entregues" />
 
             <x-testimonial-card
@@ -194,11 +194,17 @@
                 value="Seg–Sex, 8h às 18h"
                 icon="clock" />
 
+            <x-contact-card
+                label="Endereço"
+                value="Rua Santa Clara, 346 - Copacabana"
+                icon="map-pin"
+                />
+
         </div>
 
-        <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100/60 shadow-sm flex flex-col gap-3">
+        <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100/60 shadow-sm flex flex-col ">
 
-            <div class="flex items-center gap-2 text-blue-600 font-bold text-xs tracking-wider uppercase">
+            <div class="flex items-center gap-2 text-blue-600 font-bold text-xs tracking-wider uppercase mb-2">
                 <x-lucide-map-pin class="w-4 h-4" />
                 <span>Região de Atendimento</span>
             </div>
@@ -207,7 +213,7 @@
                 Zoa sul e adjacências
             </p>
 
-            <p class="text-slate-400 text-sm">
+            <p class="text-slate-400 text-base leading-relaxed">
                 Atendemos exclusivamente a Zona Sul do Rio de Janeiro.
             </p>
 

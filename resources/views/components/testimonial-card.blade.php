@@ -14,7 +14,7 @@
         {{ $number }}
     </span>
 
-    <p class="text-gray-500 font-medium text-base md:text-lg">
+    <p class="text-gray-500 text-right font-medium text-base md:text-lg">
         {{ $label }}
     </p>
 

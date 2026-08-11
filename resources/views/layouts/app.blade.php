@@ -55,14 +55,14 @@
 
             <div class="flex items-center gap-4">
                 <a
-                    href="https://api.whatsapp.com/send?phone={{ env('WHATSAPP_NUMBER') }}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
+                    href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
                     target="_blank"
                     class="text-brand hidden lg:flex items-center gap-2 text-sm font-medium">
                     <x-lucide-phone class="w-5 h-5" />
                     (21) 99315-3214
                 </a>
                 <a
-                    href="https://api.whatsapp.com/send?phone={{ env('WHATSAPP_NUMBER') }}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
+                    href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
                     target="_blank"
                     class="btn btn-outline btn-accent text-brand hidden md:flex">
                     <img class="h-6 mr-2" src="{{ asset('images/icons/whatsapp-color.svg') }}" alt="Whatsapp Icon" />
@@ -99,7 +99,6 @@
                 <span class="text-sm text-gray-400">Manutenção Predial</span>
             </div>
             <p class="text-sm text-gray-400 text-center md:text-right">&copy; {{ date('Y') }} DS Engenharia - Todos os direitos reservados.<br />
-                Rua Santa Clara, 346 - Copabacana<br/>
                 CNPJ: 12.345.678/0001-90
             </p>
         </div>
