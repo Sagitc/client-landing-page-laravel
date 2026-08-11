@@ -14,11 +14,11 @@
 
 </section>
 
-<section id="services" class="bg-white rounded-lg py-15 scroll-mt-15">
+<section id="services" class="rounded-lg py-15 scroll-mt-15">
     <div class="max-w-7xl mx-auto px-2">
         <div class="text-center mb-8">
-            <h2 class="text-4xl font-bold text-center text-brand mb-4">Nossas especialidades</h2>
-            <span class="text-lg font-medium text-center text-gray-500">
+            <h2 class="text-4xl font-bold text-center text-brand-secondary mb-4">Nossas especialidades</h2>
+            <span class="text-lg font-medium text-center text-brand-primary">
                 Soluções completas de engenharia predial para preservar o valor e a segurança do seu <br />condomínio.
             </span>
         </div>
@@ -109,7 +109,7 @@
     </div>
 </section>
 
-<section id="about" class="bg-white py-10 sm:py-28 rounded-lg scroll-mt-40">
+<section id="about" class="py-10 sm:py-28 rounded-lg scroll-mt-40">
     <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8">
         <div class="relative">
             <div class="absolute -inset-4 rounded-3xl bg-brand-red/10 -z-10"></div>
@@ -120,32 +120,32 @@
                 height="1200"
                 loading="lazy"
                 class="aspect-square w-full rounded-2xl object-contain shadow-xl" />
-            <div class="absolute -bottom-6 -right-2 hidden rounded-xl border border-border bg-white p-4 shadow-lg sm:block">
+            <div class="absolute -bottom-6 right-6 hidden rounded-xl bg-white p-4 shadow-lg sm:block">
                 <div class="flex items-center gap-3">
-                    <div class="grid h-12 w-12 place-items-center rounded-lg bg-brand">
-                        <x-lucide-hard-hat class="h-6 w-6 text-white" />
+                    <div class="grid h-12 w-12 place-items-center rounded-lg bg-brand-primary">
+                        <x-lucide-hard-hat class="h-6 w-6 text-brand-secondary" />
                     </div>
                     <div>
-                        <p class="text-2xl font-extrabold text-navy">+18 anos</p>
-                        <p class="text-xs text-muted-foreground">de experiência técnica</p>
+                        <p class="text-2xl font-extrabold text-brand-secondary">+18 anos</p>
+                        <p class="text-xs text-brand-primary/80">de experiência técnica</p>
                     </div>
                 </div>
             </div>
         </div>
         <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-gray-400/80">Sobre a empresa</span>
-            <h2 class="mt-3 text-3xl font-extrabold text-brand sm:text-4xl">Sobre a DS Engenharia</h2>
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-primary/80">Sobre a empresa</span>
+            <h2 class="mt-3 text-3xl font-extrabold text-brand sm:text-4xl text-brand-secondary">Sobre a DS Engenharia</h2>
             <p class="mt-6 text-base leading-relaxed  sm:text-lg">
                 DS Engenharia é uma empresa especializada em manutenção predial,
                 com 18 anos de experiência no mercado, oferecendo soluções
                 completas em engenharia civil para condomínios residenciais,
-                comerciais e industriais. <strong class="text-navy">Nossa atuação é pautada pela excelência
+                comerciais e industriais. <strong class="text-brand-secondary">Nossa atuação é pautada pela excelência
                     técnica, segurança, compromisso com prazos e qualidade na execução
                     dos serviços</strong>, sempre buscando preservar, recuperar e valorizar o
                 patrimônio de nossos clientes.
             </p>
             <p class="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Contamos com uma <strong class="text-navy">equipe de profissionais altamente qualificados</strong>, sob
+                Contamos com uma <strong class="text-brand-secondary">equipe de profissionais altamente qualificados</strong>, sob
                 responsabilidade técnica de engenheiro habilitado, executando serviços
                 de manutenção preventiva, corretiva e preditiva em conformidade com
                 as normas da ABNT, Normas Regulamentadoras (NRs) e demais
@@ -155,19 +155,19 @@
                 desempenho às edificações.
             </p>
 
-            <div class="mt-8 rounded-xl  bg-brand text-white p-5">
-                <p class="text-sm font-semibold uppercase tracking-wider text-gray-400/80">Responsável Técnico</p>
-                <p class="mt-1 text-lg font-bold text-navy">Engenheiro Diego Soares</p>
+            <div class="mt-8 rounded-lg bg-brand-primary p-5">
+                <p class="text-sm font-semibold uppercase tracking-wider text-brand-secondary">Responsável Técnico</p>
+                <p class="mt-1 text-lg font-bold text-white">Engenheiro Diego Soares</p>
                 <p class="text-sm text-gray-400/80">CREA/RJ: 2020110274</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="contact" class="py-16 bg-gray-50/50 scroll-mt-20">
+<section id="contact" class="py-16 scroll-mt-20">
     <div class="container mx-auto max-w-2xl bg-white rounded-xl p-8">
 
-        <h2 class="text-2xl text-center font-bold text-slate-950 mb-8">
+        <h2 class="text-2xl text-center font-bold text-brand-secondary mb-8">
             Outras formas de contato
         </h2>
 
@@ -180,7 +180,7 @@
                 href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." />
 
             @php
-            $email = 'comercial@oicramengenharia.com.br';
+            $email = 'contato@dsengenharia.org';
             $mailtoUrl = "mailto:{$email}?subject=" . rawurlencode('Solicitação de Orçamento') . "&body=" . rawurlencode('Olá! Gostaria de um orçamento para serviços de manutenção.');
             @endphp
             <x-contact-card
@@ -204,8 +204,8 @@
 
         <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100/60 shadow-sm flex flex-col ">
 
-            <div class="flex items-center gap-2 text-blue-600 font-bold text-xs tracking-wider uppercase mb-2">
-                <x-lucide-map-pin class="w-4 h-4" />
+            <div class="flex items-center gap-2 text-brand-secondary font-bold text-xs tracking-wider uppercase mb-2">
+                <x-lucide-map-pin class="w-4 h-4 text-brand-secondary" />
                 <span>Região de Atendimento</span>
             </div>
 

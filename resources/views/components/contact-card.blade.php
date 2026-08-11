@@ -17,7 +17,7 @@
     ]) }}
 >
     <div class="text-blue-500 group-hover:text-brand/80 flex items-center justify-center shrink-0 transition-colors duration-300">
-        <x-dynamic-component :component="'lucide-' . $icon" class="w-6 h-6" />
+        <x-dynamic-component :component="'lucide-' . $icon" class="w-6 h-6 text-brand-secondary" />
     </div>
 
     <div class="flex flex-col">
@@ -25,7 +25,7 @@
             {{ $label }}
         </span>
         <span @class([
-            'text-base font-bold text-slate-800 tracking-tight leading-normal transition-all',
+            'text-base font-bold text-brand-primary tracking-tight leading-normal transition-all',
             'group-hover:text-brand' => $href
         ])>
             {{ $value }}

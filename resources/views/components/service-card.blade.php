@@ -5,12 +5,12 @@
     'link' => '#'
 ])
 
-<div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-brand hover:shadow-md group">
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-brand hover:shadow-md group">
 
     <div>
         <div class="relative w-full h-52 overflow-hidden">
-            <div class="absolute top-4 left-4 z-10 w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-md bg-slate-900/90 backdrop-blur-sm group-hover:bg-brand transition-colors duration-300">
-                <x-dynamic-component :component="'lucide-' . $icon" class="w-5 h-5" />
+            <div class="absolute top-4 left-4 z-10 w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-md bg-brand-primary backdrop-blur-sm group-hover:bg-brand transition-colors duration-300">
+                <x-dynamic-component :component="'lucide-' . $icon" class="w-5 h-5 text-brand-secondary" />
             </div>
 
             <picture>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="">
-            <h3 class="text-lg font-bold text-slate-900 p-6">
+            <h3 class="text-lg font-bold text-brand-primary p-4">
                 {{ $serviceName }}
             </h3>
         </div>
