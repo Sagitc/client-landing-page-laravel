@@ -64,8 +64,8 @@
                 <a
                     href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
                     target="_blank"
-                    class="text-white bg-brand-secondary hidden md:flex px-3 p-2 rounded-lg font-medium">
-                    <img class="h-6 mr-2" src="{{ asset('images/icons/whatsapp-color.svg') }}" alt="Whatsapp Icon" />
+                    class="text-brand-secondary hidden md:flex px-3 p-2 rounded-lg font-medium items-center border border-brand-secondary hover:bg-brand-secondary hover:text-white transition duration-300">
+                    <img class="h-5 mr-2" src="{{ asset('images/icons/whatsapp-color.svg') }}" alt="Whatsapp Icon" />
                     Whatsapp
                 </a>
             </div>
@@ -75,7 +75,7 @@
                     <x-lucide-menu class="w-6 h-6 md:hidden text-brand-secondary" />
                 </div>
 
-                <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 p-2 w-50 text-nowrap text-white shadow-sm">
+                <ul tabindex="-1" class="dropdown-content menu bg-gray-600 rounded-box z-1 p-2 w-50 text-nowrap text-white shadow-sm">
                     <li><a href="{{ route('home') }}#hero" data-anchor="#hero" class="nav-link-item">Início</a></li>
                     <li><a href="{{ route('home') }}#services" data-anchor="#services" class="nav-link-item">Serviços</a></li>
                     <li><a href="{{ route('home') }}#about" data-anchor="#about" class="nav-link-item">Sobre nós</a></li>
@@ -92,7 +92,7 @@
     </main>
 
     {{-- FOOTER --}}
-    <footer class="bg-brand-primary text-white py-8 text-center mt-auto">
+    <footer class="bg-brand-secondary text-white py-8 text-center mt-auto">
         <div class="flex flex-col gap-5 md:flex-row justify-between items-center max-w-7xl mx-auto px-4 lg:px-2">
             <div class="flex flex-col items-start">
                 <span class="font-extrabold text-lg">DS Engenharia</span>
