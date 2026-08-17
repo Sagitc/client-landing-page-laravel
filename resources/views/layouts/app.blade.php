@@ -104,6 +104,7 @@
         </div>
     </footer>
 
+    <x-whatsapp-floating />
 </body>
 
 <script>

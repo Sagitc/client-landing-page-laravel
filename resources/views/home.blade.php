@@ -19,7 +19,7 @@
         <div class="text-center mb-8">
             <h2 class="text-4xl font-bold text-center text-brand-secondary mb-4">Nossas especialidades</h2>
             <span class="text-lg font-medium text-center text-brand-primary">
-                Soluções completas de engenharia predial para preservar o valor e a segurança do seu <br />condomínio.
+                Soluções de engenharia que protegem e valorizam o seu condomínio.
             </span>
         </div>
 
