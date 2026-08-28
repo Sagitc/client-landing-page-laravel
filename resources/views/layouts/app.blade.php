@@ -8,6 +8,10 @@
     {{-- O @yield permite que cada página defina seu próprio título --}}
     <title>@yield('title', 'DS Engenharia | Manutenção e Reformas em Edificações')</title>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+
     <meta name="description" content="@yield('meta_description', 'Especialistas em reforma de fachada, impermeabilização e manutenção predial em Copacabana e Zona Sul e adjacências. Mais de 18 anos de experiência.')">
 
     <meta property="og:title" content="@yield('title', 'DS Engenharia | Reforma de Fachada e Manutenção Predial')">
@@ -21,7 +25,7 @@
 <body class="antialiased bg-[#fafafa] text-gray-900 flex flex-col gap-4 min-h-screen relative">
 
     {{-- HEADER / NAVBAR  --}}
-    <header class="w-full bg-white/90 shadow-sm h-22 flex items-center sticky top-0 z-50 backdrop-blur-3xl">
+    <header class="w-full bg-white/90 shadow-sm h-22 flex items-center sticky top-0 z-50 backdrop-blur-3xl px-4 lg:px-2">
         <div class="max-w-7xl w-full mx-auto flex justify-between items-center px-4 lg:px-0 py-2">
 
             <a href="{{ route('home') }}#hero" class="flex items-center cursor-pointer">
@@ -55,14 +59,14 @@
 
             <div class="flex items-center gap-4">
                 <a
-                    href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
+                    href="https://api.whatsapp.com/send?phone=5521990157731&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
                     target="_blank"
                     class="text-brand hidden lg:flex items-center gap-2 text-sm font-medium">
                     <x-lucide-phone class="w-5 h-5 text-brand-secondary" />
-                    (21) 99315-3214
+                    (21) 99015-7731
                 </a>
                 <a
-                    href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
+                    href="https://api.whatsapp.com/send?phone=5521990157731&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20DS%20Engenharia."
                     target="_blank"
                     class="text-brand-secondary hidden md:flex px-3 p-2 rounded-lg font-medium items-center border border-brand-secondary hover:bg-brand-secondary hover:text-white transition duration-300">
                     <img class="h-5 mr-2" src="{{ asset('images/icons/whatsapp-color.svg') }}" alt="Whatsapp Icon" />
@@ -93,18 +97,87 @@
 
     {{-- FOOTER --}}
     <footer class="bg-brand-secondary text-white py-8 text-center mt-auto">
-        <div class="flex flex-col gap-5 md:flex-row justify-between items-center max-w-7xl mx-auto px-4 lg:px-2">
+        <div class="flex flex-col gap-8 lg:flex-row justify-between items-center max-w-7xl mx-auto px-4 lg:px-2">
             <div class="flex flex-col items-start">
+                <!-- <img src="{{ asset('images/logo/logo-main.svg') }}" class="h-20" alt="DS Engenharia Logo"> -->
                 <span class="font-extrabold text-lg">DS Engenharia</span>
                 <span class="text-sm text-gray-400">Manutenção Predial</span>
             </div>
-            <p class="text-sm text-gray-400 text-center md:text-right">&copy; {{ date('Y') }} DS Engenharia - Todos os direitos reservados.<br />
+
+            <p class="text-sm text-gray-400 text-center">&copy; {{ date('Y') }} DS Engenharia<br/>Todos os direitos reservados.<br />
                 CNPJ: 12.345.678/0001-90
             </p>
         </div>
     </footer>
 
     <x-whatsapp-floating />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true,
+                offset: 100, // Distância da tela (em px) antes de disparar a animação
+                duration: 800,
+                easing: 'ease-out-cubic', // Curva de aceleração elegante
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Configura o observador para iniciar a animação apenas quando a seção aparecer na tela
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const box = entry.target;
+
+                        // Busca a tag com a classe que você adicionou no Passo 1
+                        const targetElement = box.querySelector('.number-animate');
+
+                        if (targetElement) {
+                            const target = parseInt(box.getAttribute('data-target'));
+                            const prefix = box.getAttribute('data-prefix') || '';
+                            const suffix = box.getAttribute('data-suffix') || '';
+
+                            const duration = 2000; // Duração total em milissegundos (2 segundos)
+                            const frameRate = 1000 / 60; // Travado em 60fps para fluidez total
+                            const totalFrames = Math.round(duration / frameRate);
+                            const increment = target / totalFrames;
+
+                            let currentCount = 0;
+
+                            const updateCounter = () => {
+                                currentCount += increment;
+
+                                if (currentCount < target) {
+                                    // toLocaleString('pt-BR') coloca o ponto de milhar automaticamente
+                                    targetElement.innerText = prefix + Math.ceil(currentCount).toLocaleString('pt-BR') + suffix;
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    // Garante que o número final seja exato
+                                    targetElement.innerText = prefix + target.toLocaleString('pt-BR') + suffix;
+                                }
+                            };
+
+                            updateCounter();
+                        }
+
+                        // Desliga o observador para este elemento (anima apenas 1 vez)
+                        observer.unobserve(box);
+                    }
+                });
+            }, {
+                threshold: 0.3
+            }); // Inicia a contagem quando 30% do box estiver visível
+
+            // Procura todos os contadores e começa a observá-los
+            document.querySelectorAll('.counter-box').forEach(box => {
+                observer.observe(box);
+            });
+        });
+    </script>
 </body>
 
 <script>

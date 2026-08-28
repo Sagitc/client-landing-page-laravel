@@ -10,7 +10,7 @@
         <x-dynamic-component :component="'lucide-' . $icon" class="w-7 h-7" />
     </div>
     
-    <span class="text-3xl md:text-6xl font-extrabold tracking-tight bg-linear-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent mb-2">
+    <span class="number-animate text-3xl md:text-6xl font-extrabold tracking-tight bg-linear-to-r from-brand-primary shimmer to-brand-secondary bg-clip-text text-transparent mb-2">
         {{ $number }}
     </span>
 

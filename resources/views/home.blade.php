@@ -4,80 +4,111 @@
 
 @section('content')
 
-<section id="hero" class="h-100 lg:h-180">
+<section id="hero" class="h-100 lg:h-180" data-aos="fade-up" data-aos-delay="100">
     <div class="max-w-7xl mx-auto h-full md:h-full w-full flex ">
         <img
             src="{{ asset('images/hero/banner-desktop.jpeg') }}"
             alt="Banner DS Engenharia"
-            class="flex-1 h-full w-full rounded-lg object-cover  md:aspect-video overflow-hidden object-left">
+            class="flex-1 h-full w-full rounded-lg object-cover md:aspect-video overflow-hidden object-left">
     </div>
+</section>
 
+<section
+    id="declaration"
+    class="py-10 sm:py-28 rounded-lg mt-10 scroll-mt-15 bg-linear-to-r from-brand-red/10 to-brand-secondary/10"
+    data-aos="fade-right">
+    <div class="flex items-center justify-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-brand-secondary">
+            Referência em serviços de manutenção predial na zona sul do Rio.
+        </h2>
+    </div>
 </section>
 
 <section id="services" class="rounded-lg py-15 scroll-mt-15">
     <div class="max-w-7xl mx-auto px-2">
-        <div class="text-center mb-8">
-            <h2 class="text-4xl font-bold text-center text-brand-secondary mb-4">Nossas especialidades</h2>
-            <span class="text-lg font-medium text-center text-brand-primary">
+        <div id="services-header" class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-center text-brand-secondary mb-4" data-aos="fade-up">Nossas especialidades</h2>
+            <span class="text-lg font-medium text-center text-brand-primary" data-aos="fade-up" data-aos-delay="200">
                 Soluções de engenharia que protegem e valorizam o seu condomínio.
             </span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <x-service-card
-                serviceName="Restauração de fachadas"
-                backgroundImage="images/services/facades.jpg"
-                icon="building-2"
-                link="{{ route('services') }}" />
+            <!-- Linha 1 -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <x-service-card
+                    serviceName="Restauração de fachadas"
+                    backgroundImage="images/services/facades.jpg"
+                    icon="building-2"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Recuperação estrutural"
-                backgroundImage="images/services/structural-restoration.jpeg"
-                icon="shield-check"
-                link="{{ route('services') }}" />
+            <div data-aos="fade-up" data-aos-delay="200">
+                <x-service-card
+                    serviceName="Recuperação estrutural"
+                    backgroundImage="images/services/structural-restoration.jpeg"
+                    icon="shield-check"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Projetos e reformas"
-                backgroundImage="images/services/projects.jpg"
-                icon="wrench"
-                link="{{ route('services') }}" />
+            <div data-aos="fade-up" data-aos-delay="300">
+                <x-service-card
+                    serviceName="Reformas"
+                    backgroundImage="images/services/projects.jpg"
+                    icon="wrench"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Lavagem pressurizada"
-                backgroundImage="images/services/washing.png"
-                icon="waves"
-                link="{{ route('services') }}" />
+            <!-- Linha 2 -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <x-service-card
+                    serviceName="Lavagem pressurizada"
+                    backgroundImage="images/services/washing.png"
+                    icon="waves"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Pintura"
-                backgroundImage="images/services/painting.jpg"
-                icon="paint-bucket"
-                link="{{ route('services') }}" />
+            <div data-aos="fade-up" data-aos-delay="200">
+                <x-service-card
+                    serviceName="Pintura"
+                    backgroundImage="images/services/painting.jpg"
+                    icon="paint-bucket"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Drenos"
-                backgroundImage="images/services/drains.jpeg"
-                icon="droplets"
-                link="{{ route('services') }}" />
+            <div data-aos="fade-up" data-aos-delay="300">
+                <x-service-card
+                    serviceName="Drenos"
+                    backgroundImage="images/services/drains.jpeg"
+                    icon="droplets"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Autovistoria"
-                backgroundImage="images/services/inspection.jpg"
-                icon="clipboard-check"
-                link="{{ route('services') }}" />
+            <!-- Linha 3 -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <x-service-card
+                    serviceName="Autovistoria"
+                    backgroundImage="images/services/inspection.jpg"
+                    icon="clipboard-check"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Elétrica"
-                backgroundImage="images/services/electrical.jpg"
-                icon="zap"
-                link="{{ route('services') }}" />
+            <div data-aos="fade-up" data-aos-delay="200">
+                <x-service-card
+                    serviceName="Elétrica"
+                    backgroundImage="images/services/electrical.jpg"
+                    icon="zap"
+                    link="{{ route('services') }}" />
+            </div>
 
-            <x-service-card
-                serviceName="Impermeabilização"
-                backgroundImage="images/services/waterproofing.jpeg"
-                icon="dam"
-                link="{{ route('services') }}" />
+            <div data-aos="fade-up" data-aos-delay="300">
+                <x-service-card
+                    serviceName="Impermeabilização"
+                    backgroundImage="images/services/waterproofing.jpeg"
+                    icon="dam"
+                    link="{{ route('services') }}" />
+            </div>
 
         </div>
 
@@ -86,32 +117,41 @@
 
 <section id="history" class="py-2 text-white overflow-hidden rounded-lg scroll-mt-15">
     <div class="container mx-auto px-4 relative">
+        <div class="flex flex-col sm:flex-row justify-evenly gap-6">
 
-        <div class="flex flex-col sm:flex-row justify-evenly">
+            <!-- Counter 1: +18 -->
+            <div data-aos="zoom-in" data-aos-delay="100" class="flex-1 counter-box" data-target="18" data-prefix="+" data-suffix="">
+                <x-testimonial-card
+                    icon="clock-arrow-up"
+                    number="0"
+                    label="Anos de experiência" />
+            </div>
 
-            <x-testimonial-card
-                icon="clock-arrow-up"
-                number="+18"
-                label="Anos de experiência" />
+            <!-- Counter 2: +1.500 -->
+            <div data-aos="zoom-in" data-aos-delay="200" class="flex-1 counter-box" data-target="1500" data-prefix="+" data-suffix="">
+                <x-testimonial-card
+                    icon="check-circle-2"
+                    number="0"
+                    label="Obras entregues" />
+            </div>
 
-            <x-testimonial-card
-                icon="check-circle-2"
-                number="+1.500"
-                label="Obras entregues" />
-
-            <x-testimonial-card
-                icon="check-check"
-                number="100%"
-                label="Compromisso com o prazo" />
+            <!-- Counter 3: 100% -->
+            <div data-aos="zoom-in" data-aos-delay="300" class="flex-1 counter-box" data-target="100" data-prefix="" data-suffix="%">
+                <x-testimonial-card
+                    icon="check-check"
+                    number="0"
+                    label="Compromisso com o prazo" />
+            </div>
 
         </div>
-
     </div>
 </section>
 
-<section id="about" class="py-10 sm:py-28 rounded-lg scroll-mt-40">
+<section id="about" class="py-10 sm:py-28 rounded-lg overflow-hidden">
     <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8">
-        <div class="relative">
+
+        <!-- Imagem vindo da esquerda -->
+        <div class="relative" data-aos="fade-right">
             <div class="absolute -inset-4 rounded-3xl bg-brand-red/10 -z-10"></div>
             <img
                 src="{{ asset('images/logo/logo-main.png') }}"
@@ -120,7 +160,9 @@
                 height="1200"
                 loading="lazy"
                 class="aspect-square w-full rounded-2xl object-contain shadow-xl" />
-            <div class="absolute -bottom-6 right-6 hidden rounded-xl bg-white p-4 shadow-lg sm:block">
+
+            <!-- Badge 18 Anos com zoom atrasado para dar charme -->
+            <div data-aos="zoom-in" data-aos-delay="400" class="absolute -bottom-6 right-6 hidden rounded-xl bg-white p-4 shadow-lg sm:block">
                 <div class="flex items-center gap-3">
                     <div class="grid h-12 w-12 place-items-center rounded-lg bg-brand-secondary">
                         <x-lucide-hard-hat class="h-6 w-6 text-white" />
@@ -132,10 +174,12 @@
                 </div>
             </div>
         </div>
-        <div>
+
+        <!-- Texto vindo da direita -->
+        <div data-aos="fade-left">
             <span class="text-xs font-bold uppercase tracking-widest text-brand-primary/80">Sobre a empresa</span>
             <h2 class="mt-3 text-3xl font-extrabold text-brand sm:text-4xl text-brand-secondary">Sobre a DS Engenharia</h2>
-            <p class="mt-6 text-base leading-relaxed  sm:text-lg">
+            <p class="mt-6 text-base leading-relaxed sm:text-lg">
                 DS Engenharia é uma empresa especializada em manutenção predial,
                 com 18 anos de experiência no mercado, oferecendo soluções
                 completas em engenharia civil para condomínios residenciais,
@@ -155,7 +199,7 @@
                 desempenho às edificações.
             </p>
 
-            <div class="mt-8 rounded-lg bg-brand-secondary p-5">
+            <div class="mt-8 rounded-lg bg-brand-secondary p-5" data-aos="fade-up" data-aos-delay="200">
                 <p class="text-sm font-semibold uppercase tracking-wider text-gray-500/80">Responsável Técnico</p>
                 <p class="mt-1 text-lg font-bold text-white">Engenheiro Diego Soares</p>
                 <p class="text-sm text-gray-400/80">CREA/RJ: 2020110274</p>
@@ -164,34 +208,23 @@
     </div>
 </section>
 
-<section id="contact" class="py-16 scroll-mt-20">
+<section id="contact" class="py-16 scroll-mt-20 overflow-hidden">
     <div class="container mx-auto max-w-7xl flex flex-col justify-between">
 
-        <h2 class="text-4xl font-bold text-center text-brand-secondary mb-10">
+        <h2 class="text-4xl font-bold text-center text-brand-secondary mb-10" data-aos="fade-up">
             Outras formas de contato
         </h2>
 
         <div class="flex gap-8 flex-col md:flex-row">
-            <div class="bg-white rounded-xl p-8 flex-1">
 
+            <div class="bg-white rounded-xl p-8 flex-1" data-aos="fade-right">
 
                 <div class="flex flex-col gap-4 mb-8">
-
                     <x-contact-card
                         label="Telefone / WhatsApp"
-                        value="(21) 99315-3214"
+                        value="(21) 99015-7731"
                         icon="phone"
-                        href="https://api.whatsapp.com/send?phone=5521993153214&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." />
-
-                    <!-- @php
-                $email = 'contato@dsengenharia.org';
-                $mailtoUrl = "mailto:{$email}?subject=" . rawurlencode('Solicitação de Orçamento') . "&body=" . rawurlencode('Olá! Gostaria de um orçamento para serviços de manutenção.');
-                @endphp
-                <x-contact-card
-                    label="E-mail"
-                    value="contato@dsengenharia.org"
-                    icon="mail"
-                    :href="$mailtoUrl" /> -->
+                        href="https://api.whatsapp.com/send?phone=5521990157731&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." />
 
                     <x-contact-card
                         label="Horário de atendimento"
@@ -203,94 +236,104 @@
                         value="Rua Santa Clara, 346 - Copacabana"
                         icon="map-pin" />
 
+                    <div class='flex items-center gap-4 py-2 transition-all duration-300 group cursor-pointer select-none'>
+                        <div class="text-blue-500 group-hover:text-brand/80 flex items-center justify-center shrink-0 transition-colors duration-300">
+                            <x-lucide-link class="w-6 h-6 text-brand-secondary" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <span class="text-sm text-gray-400 font-normal leading-snug">
+                                Redes sociais
+                            </span>
+                            <span @class([ 'text-base font-bold text-brand-primary tracking-tight leading-normal mb-2 transition-all group-hover:text-brand' ])>
+                                Siga as novidades da DS Engenharia<br />
+                            </span>
+                            <div class="flex gap-4 items-center">
+                                <a href="https://www.instagram.com/dsengenharia/" target="_blank" class="hover:underline">
+                                    <img src="{{ asset('images/icons/instagram-color.svg') }}" alt="Instagram" class="h-7">
+                                </a>
+                                <a href="https://www.facebook.com/dsengenharia" target="_blank" class="hover:underline">
+                                    <img src="{{ asset('images/icons/linkedin-color.svg') }}" alt="LinkedIn" class="h-8">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="p-6 rounded-2xl bg-blue-50/40 border border-blue-100/60 shadow-sm flex flex-col ">
-
                     <div class="flex items-center gap-2 text-brand-secondary font-bold text-xs tracking-wider uppercase mb-2">
                         <x-lucide-map-pin class="w-4 h-4 text-brand-secondary" />
                         <span>Região de Atendimento</span>
                     </div>
-
                     <p class="text-slate-900 font-medium text-base leading-relaxed">
-                        Zoa sul e adjacências
+                        Zona sul e adjacências
                     </p>
-
                     <p class="text-slate-400 text-base leading-relaxed">
                         Atendemos exclusivamente a Zona Sul do Rio de Janeiro.
                     </p>
-
                 </div>
-
-
             </div>
 
-            <div class="flex-1 bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+            <div class="flex-1 bg-white p-8 rounded-3xl shadow-sm border border-slate-100" data-aos="fade-left">
 
-                <!-- Mensagem Visual de Sucesso (Inicialmente oculta) -->
-                <div id="gmailSuccessMessage" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium items-center gap-2">
+                <div id="mailSuccessMessage" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium items-center gap-2">
                     <x-lucide-check-circle-2 class="w-5 h-5 text-emerald-600 shrink-0" />
-                    <span>Abrindo o Gmail... Seus dados foram preparados com sucesso!</span>
+                    <span>Abrindo seu aplicativo de e-mail...</span>
                 </div>
 
-                <form id="gmailContactForm" class="space-y-5">
-
-                    <!-- Campo: Nome -->
+                <form id="mailtoContactForm" class="space-y-5">
                     <div>
-                        <label for="gmail_name" class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Nome*</label>
+                        <label for="mail_name" class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Nome*</label>
                         <input
                             type="text"
-                            id="gmail_name"
+                            id="mail_name"
                             placeholder="Digite seu nome"
                             required
                             class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:border-brand focus:bg-white transition duration-200 text-sm" />
                     </div>
 
-                    <!-- Campo: E-mail -->
                     <div>
-                        <label for="gmail_email" class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">E-mail*</label>
+                        <label for="mail_email" class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">E-mail*</label>
                         <input
                             type="email"
-                            id="gmail_email"
+                            id="mail_email"
                             placeholder="seu@email.com"
                             required
                             class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:border-brand focus:bg-white transition duration-200 text-sm" />
                     </div>
 
-                    <!-- Campo: Mensagem -->
                     <div>
-                        <label for="gmail_message" class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Como podemos ajudar?*</label>
+                        <label for="mail_message" class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Como podemos ajudar?*</label>
                         <textarea
-                            id="gmail_message"
+                            id="mail_message"
                             rows="4"
                             placeholder="Descreva brevemente o serviço..."
                             required
                             class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:border-brand focus:bg-white transition duration-200 text-sm resize-none"></textarea>
                     </div>
 
-                    <!-- Botão de Ação -->
                     <button
                         type="submit"
                         class="w-full py-3.5 px-6 rounded-full bg-brand hover:bg-brand/90 text-brand-secondary font-bold text-sm tracking-wide shadow-md transition duration-300 flex items-center justify-center gap-2 cursor-pointer">
                         <x-lucide-send class="w-4 h-4" />
-                        <span>Enviar via Gmail</span>
+                        <span>Enviar por E-mail</span>
                     </button>
-
                 </form>
             </div>
 
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                    const form = document.getElementById('gmailContactForm');
-                    const successMsg = document.getElementById('gmailSuccessMessage');
+                    const form = document.getElementById('mailtoContactForm');
+                    const successMsg = document.getElementById('mailSuccessMessage');
 
                     if (form) {
                         form.addEventListener('submit', (e) => {
                             e.preventDefault();
 
-                            const name = document.getElementById('gmail_name').value.trim();
-                            const email = document.getElementById('gmail_email').value.trim();
-                            const message = document.getElementById('gmail_message').value.trim();
+                            const name = document.getElementById('mail_name').value.trim();
+                            const email = document.getElementById('mail_email').value.trim();
+                            const message = document.getElementById('mail_message').value.trim();
 
                             if (!name || !email || !message) {
                                 alert('Por favor, preencha todos os campos.');
@@ -301,19 +344,20 @@
                             const assunto = `Solicitação de Orçamento - ${name}`;
                             const corpo = `Olá, meu nome é ${name} (${email}).\n\n${message}`;
 
-                            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(destinatario)}&su=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+                            // Cria a URL mailto com os dados codificados
+                            const mailtoUrl = `mailto:${destinatario}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
 
-                            // 1. Abre a tela do Gmail em uma nova aba
-                            window.open(gmailUrl, '_blank');
+                            // Dispara a abertura do cliente de e-mail padrão do dispositivo
+                            window.location.href = mailtoUrl;
 
-                            // 2. Limpa todos os campos do formulário
+                            // Limpa o formulário e exibe a mensagem
                             form.reset();
-
-                            // 3. Exibe o aviso visual de sucesso e oculta após 4 segundos
                             if (successMsg) {
                                 successMsg.classList.remove('hidden');
+                                successMsg.classList.add('flex');
                                 setTimeout(() => {
                                     successMsg.classList.add('hidden');
+                                    successMsg.classList.remove('flex');
                                 }, 4000);
                             }
                         });
